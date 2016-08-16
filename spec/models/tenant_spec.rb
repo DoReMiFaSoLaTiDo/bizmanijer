@@ -1,5 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Tenant, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it 'has organization industry type' do
+    expect(Tenant.new.sector).to be_true
+  end
 end

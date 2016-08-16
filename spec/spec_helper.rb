@@ -38,7 +38,7 @@ Spork.prefork do
   RSpec.configure do |config|
     config.include EmailSpec::Helpers
     config.include EmailSpec::Matchers
-    config.include Features::Helpers, type: :feature
+    # config.include Features::Helpers, type: :feature
 
     # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
     config.fixture_path = "#{::Rails.root}/spec/fixtures"
@@ -85,7 +85,7 @@ Spork.prefork do
 
   # The settings below are suggested to provide a good initial experience
   # with RSpec, but feel free to customize to your heart's content.
-  =begin
+  # =begin
     # This allows you to limit a spec run to individual examples or groups
     # you care about by tagging them with `:focus` metadata. When nothing
     # is tagged with `:focus`, all examples get run. RSpec also provides
@@ -131,10 +131,10 @@ Spork.prefork do
     # test failures related to randomization by passing the same `--seed` value
     # as the one that triggered the failure.
     Kernel.srand config.seed
-  =end
+  # =end
   end
 end
 
-Spork.each_run do
-  # This code will be run each time you run your specs.
-end
+# Spork.each_run do
+#   # This code will be run each time you run your specs.
+# end

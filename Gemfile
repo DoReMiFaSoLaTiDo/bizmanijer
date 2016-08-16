@@ -28,6 +28,11 @@ gem 'apartment'
 
 # gem for managing monetary values
 gem 'money'
+
+gem 'hirb' # better db output in IRB
+gem 'simple_form' #easier form generator
+gem 'bootstrap-sass' # sass powered version of bootstrap-rails
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -35,14 +40,13 @@ gem 'money'
 # gem 'unicorn'
 
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+# gem 'capistrano-rails'
+# Access an IRB console on exception pages or by using <%= console %> in views
+gem 'web-console', '~> 2.0', group: :development
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
@@ -55,6 +59,7 @@ end
 group :test do
   gem 'selenium-webdriver' #, '2.35.1'  # capybara dependency
   gem 'capybara' #, '2.1.0' #Simulate users BEHAVIOR.
+  gem 'email_spec' # capybara dependency
   gem 'poltergeist'  # dependency for capybara headless web driver. Can be alternative to selenium-webdriver
   gem 'spork-rails' #, '4.0.0'  # To Speed up RSpec
   gem 'factory_girl_rails' #, '4.2.0'  #Factory to generate data
