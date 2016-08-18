@@ -33,6 +33,8 @@ gem 'hirb' # better db output in IRB
 gem 'simple_form' #easier form generator
 gem 'bootstrap-sass' # sass powered version of bootstrap-rails
 
+gem 'cloudinary' # to help manage images
+gem 'responders', '~>2.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

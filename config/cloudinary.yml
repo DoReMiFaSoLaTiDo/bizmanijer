@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: crmik
+  api_key: '453142428577167'
+  api_secret: V07PTHkfqJd36AoEmczz170X0Gs
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: crmik
+  api_key: '453142428577167'
+  api_secret: V07PTHkfqJd36AoEmczz170X0Gs
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: crmik
+  api_key: '453142428577167'
+  api_secret: V07PTHkfqJd36AoEmczz170X0Gs
+  enhance_image_tag: true
+  static_image_support: false

@@ -1,10 +1,10 @@
 <div class="container">
-  <div class="jumbotron">
-    <h1>Invest Wisely</h1>
-     <p>In today's world internet is the most popular way of connecting with the people. At <a href="http://www.tutorialrepublic.com" target="_blank">tutorialrepublic.com</a> you will learn the essential of web development technologies along with real life practice example, so that you can create your own website to connect with the people around the world.</p>
-
-      <p><a href="http://www.tutorialrepublic.com" target="_blank" class="btn btn-success btn-lg">Get started today</a></p>
-
+  <div class='jumbotron' style = "background-image:url('<%= background_image_url %>'); background-size:cover">
+    <!-- <%= cl_image_tag 'sample.jpg', width: 'auto', crop: 'scale', class: 'cloudinary-image', dpr: 'auto' %> -->
+  <!-- <div class="jumbotron" style = "background-image:url('<%= background_image_url %>'); background-size:cover"> -->
+    <!-- <%= cl_image_tag 'sample.jpg', responsive_width: true, crop: 'scale' %> -->
+    <!-- <%= cl_image_tag background_image_url, visibility:"hidden" %> -->
+    <!-- <div class="jumbotron" cl_image_tag "sample.jpg"  background-size:cover> -->
   </div>
   <div class="row">
     <div class="col-xs-4">
@@ -33,5 +33,4 @@
             We are recruiting! Visit our <a href="/career/" target="_blank">career page</a> for more information.</p>
 
         </div>
-
-    </div>
+      </div>

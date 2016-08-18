@@ -3,6 +3,10 @@ module ApplicationHelper
     Tenant.current.image_url
   end
 
+  def logo_img_url
+    Tenant.current.image_url
+  end
+
   def nav_link(link_text, link_path, http_method)
     class_name = current_page?(link_path) ? 'active' : ''
 

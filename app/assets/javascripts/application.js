@@ -14,3 +14,19 @@
 //= require bootstrap
 //= require jquery_ujs
 //= require_tree .
+
+$( document ).ready( function() {
+    $.cloudinary.responsive();
+}
+
+
+var width = $(window).width();
+// Because in my case the image is used as a jumbotron and so stretches the full width of a window //
+if (width >= 768) {
+  var image_height = 350
+} else {
+  var image_height = 250
+}
+$('#cover-image').append(
+    $.cloudinary.image(image_name, { width: width, height: image_height, crop: "fill" })
+)};

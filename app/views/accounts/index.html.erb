@@ -1,0 +1,35 @@
+<div id="container">
+  <div id="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+      <h1>Account Statement</h1>
+      <table class="table-striped">
+        <thead>
+          <tr>
+            <th rowspan="2">Transaction Date</th>
+            <th rowspan="2">Description</th>
+            <th colspan="2" align="center">Amount</th>
+          </tr>
+          <tr>
+            <th align="center">Credit</th>
+            <th align="center">Debit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @transactions.each do |transaction| %>
+          <tr>
+            <td><%= transaction.tran_date.strftime('%m/%d/%Y') %></td>
+            <td><%= transaction.description %></td>
+            <% if transaction.tran_type == 1 %>
+              <td><%= transaction.amount %></td><td></td>
+            <% else %>
+              <td></td><td><%= transaction.amount %></td>
+            <% end %>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    <!-- <div class="col-8-md">
+    </div> -->
+  </div>
+</div>

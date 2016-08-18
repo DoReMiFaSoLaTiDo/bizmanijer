@@ -1,0 +1,32 @@
+<%= simple_form_for(@transaction) do |f| %>
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h3 class="modal-title">Transaction for <%= Tenant.current.name%></h3>
+        </div>
+        <div class="modal-body">
+          <%= f.error_notification %>
+          <div class="form-inputs">
+            <%= f.input :tran_type, label: "Transaction Type", collection: [['Income',1  ],['Expenditure',2]] %>
+            <%= f.input :tran_date, label: "Date" %>
+            <%= f.input :description %>
+            <%= f.input :division, as: :select, collection: @divisions  %>
+            <%= f.input :amount %>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          <%= f.button :submit, "Create Transaction", class:%w(btn btn-success) %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<script type="text/javascript">
+    $(window).load(function(){
+        $('#myModal').modal('show');
+    });
+</script>
